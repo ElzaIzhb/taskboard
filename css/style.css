@@ -1,0 +1,139 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+#changeBackground{
+    position: fixed;
+    max-width: 380px;
+    height: 100vh;
+    background-color:rgb(185, 134, 134);
+    z-index: 2;
+    top: 0;
+    right: -400px;
+}
+#boards {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.board {
+    color: white;
+    height: 100vh;
+}
+.board-header {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.board-header input {
+    color: white;
+    font-size: 40px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+.board-header input:focus {
+    color: black;
+    background-color: white;
+}
+.board-content {
+    display: flex;
+}
+.column {
+    color: black;
+    width: 250px;
+    background-color: gainsboro;
+    margin: 0 10px ;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.column-header {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 5px 0;
+}
+.column-header input {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    max-width: 200px;
+}
+.column-header input:focus {
+    background-color: white;
+}
+.column-content {
+    padding: 5px;
+}
+.column-delete {
+    display: none;
+    cursor: pointer;
+}
+.column:hover .column-delete {
+    display: block;
+}
+.card {
+    background-color: ghostwhite;
+    border-radius: 5px;
+    margin: 5px 0;
+    position: relative;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.card-delete {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.card:hover .card-delete {
+    display: block;
+}
+.flex-box {
+    display: flex;
+}
+.to-right {
+    margin: 0 0 0 auto;
+}
+#close-wallpapers{
+    cursor: pointer;
+    width: 100%;
+    padding-left: 330px;
+}
+.ghost {
+    opacity: 0.5;
+}
+.d-none{
+    display: none;
+}
+.bg-fix {
+    background-size: cover;
+    background-position: center;
+}
+.lot{
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 90px;
+    background-size: cover;
+    margin: 7px;
+    border-radius: 0 20px;
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btn-addCard{
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+.btn{
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border-color: white;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
