@@ -60,13 +60,13 @@
         <div class="board bg-fix" style="background-image: url('${board_background}');">
             <div class="board-header flex-box">
                 <div>
-                    <input type="text" value="${board_header}" oninput="boardRename(${board_number})">
-                </div>
-                <div>
                     <button class="btn flex-box" onclick="toggleBoardsList()" >
                         <div>Доски</div>
                     </button>
-                </div>               
+                </div> 
+                <div>
+                    <input type="text" value="${board_header}" oninput="boardRename(${board_number})">
+                </div>           
                 <div>
                     <button class="btn  flex-box" onclick="toggleWallpapaers()">
                         <div>Сменить фон</div>

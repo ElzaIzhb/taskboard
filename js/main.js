@@ -2,16 +2,14 @@
     let wallpaper = [
         {   "title" : "imagess",
             "image": [
-                "https://catherineasquithgallery.com/uploads/posts/2021-02/1612858196_18-p-krasnii-fon-prirodi-46.jpg",
-                "https://i.pinimg.com/originals/4c/b6/bc/4cb6bcbb863017f2f702e5fe07becaf1.jpg",
-                "https://phonoteka.org/uploads/posts/2022-02/1644449611_47-phonoteka-org-p-fioletovii-fon-profilya-48.jpg",
-                "https://images.wallpaperscraft.ru/image/single/gory_les_sumerki_138980_3840x2160.jpg",
-                "https://img3.akspic.ru/attachments/crops/6/8/3/5/85386/85386-voda-liniya_gorizonta-gorod-gorodskoj_pejzazh-nebo-3840x2160.jpg",
-                "https://mota.ru/upload/resize/1680/1050/upload/wallpapers/2022/03/14/16/00/79733/space-stars-galaxy-dark-background-7be.jpg",
-                "https://i.pinimg.com/originals/22/19/90/2219906834db72dfd851a9301fa93730.jpg",
-                "https://img2.akspic.ru/attachments/crops/2/7/2/8/88272/88272-voda-most-purpur-gorodskoj_pejzazh-otrazhenie-3840x2160.jpg",
-                "https://catherineasquithgallery.com/uploads/posts/2021-12/1639743859_237-catherineasquithgallery-com-p-fon-lesa-rozovogo-431.jpg",
-                "https://i.pinimg.com/originals/7b/76/b7/7b76b76d2c3c6b69bcf9c65e8d24210e.jpg",
+                "https://elzaizhb.github.io/taskboard/img/4cb6bcbb863017f2f702e5fe07becaf1.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/1612858196_18-p-krasnii-fon-prirodi-46.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/1639743859_237-catherineasquithgallery-com-p-fon-lesa-rozovogo-431.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/1644449611_47-phonoteka-org-p-fioletovii-fon-profilya-48.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/2219906834db72dfd851a9301fa93730.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/7b76b76d2c3c6b69bcf9c65e8d24210e.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/gory_les_sumerki_138980_3840x2160.jpg",
+                "https://github.com/ElzaIzhb/taskboard/blob/main/img/space-stars-galaxy-dark-background-7be.jpg",
             ]
         }
     ]
@@ -30,7 +28,7 @@
             "boards":[
                 {
                     "title":"Новая доска",
-                    "background": "https://klevtsovaelena.github.io/wallpaper/img/BlackWhite11.jpg",
+                    "background": "https://sun1-22.userapi.com/impg/qKUKN4YGyNBq815yYcvuWHisPbsSkPfLeSKGLQ/cik57HVDoXM.jpg?size=2560x1600&quality=96&sign=7e8abf3c575a31f398fa3c8df7ef1364&type=album",
                     "columns":[
                         {
                             "title":"Новая колонка",
@@ -48,7 +46,7 @@
                 "boards":[
                     {
                         "title":"Новая доска",
-                        "background": "https://klevtsovaelena.github.io/wallpaper/img/BlackWhite11.jpg",
+                        "background": "https://sun1-22.userapi.com/impg/qKUKN4YGyNBq815yYcvuWHisPbsSkPfLeSKGLQ/cik57HVDoXM.jpg?size=2560x1600&quality=96&sign=7e8abf3c575a31f398fa3c8df7ef1364&type=album",
                         "columns":[
                             {
                                 "title":"Новая колонка",
@@ -169,7 +167,7 @@
         //сщздаём объект пустой доски
         let board = {
                         "title":"Новая доска",
-                        "background": "https://klevtsovaelena.github.io/wallpaper/img/BlackWhite11.jpg",
+                        "background": "https://github.com/ElzaIzhb/taskboard/blob/main/img/1612858196_18-p-krasnii-fon-prirodi-46.jpg",
                         "columns":[
                             {
                                 "title":"Новая колонка",
@@ -202,7 +200,6 @@
         renderBoardsList();
     }
 
-//----------------------------------------------------------------------------------------------------------
     //функция для удаления доски
     function boardDelete() {
 
@@ -236,7 +233,7 @@
         } 
 
     }
-    //------------------------------------------------------------------------------------------------------
+
     //функция проверки какую функцию вызвать при нажатии на side-menu-item в меню boardList
     function whatFunction() {
 
@@ -249,9 +246,7 @@
             changeBoard();
         }
     }
-    //---------------------------------------------------------------------------------------------------
 
-//---------------------------------------------------------------------------------------------
     //функция для удаления доски из boarderList
     function boardListDelete(num) {
 
@@ -289,8 +284,7 @@
            
         }
 
-    }
-//--------------------------------------------------------------------------------------------------    
+    } 
 
     //функция создания колонки
     function columnAdd(){
