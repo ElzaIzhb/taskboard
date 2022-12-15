@@ -2,109 +2,314 @@ body {
     padding: 0;
     margin: 0;
 }
+.formCardAdd{
+    padding: 0 5px;
+}
 #changeBackground{
     position: fixed;
-    max-width: 380px;
+    width: 400px;
     height: 100vh;
-    background-color:rgb(185, 134, 134);
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 2;
     top: 0;
     right: -400px;
+    overflow-y: scroll;
+    transition: all 0.4s;
+}
+#wallpapers {
+    text-align: center;
+}
+.wallpapers-activ{
+    right: 0px !important;
+}
+#side-menu{
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    z-index: 2;
+    top: 0;
+    left: -400px;
+    transition: all 0.4s;
+}
+.side-menu-activ{
+    left: 0px !important;
+}
+.side-menu-item{
+    color: white;
+    font-weight: bold;
+    min-height: 50px;
+    margin: 7px 0;
+    padding: 0 10px;
+    cursor: pointer;
+    justify-content: left;
+    column-gap: 10px;
+    align-items: center;
+    transition: all 0.3s;
+}
+.side-menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.56);
 }
 #boards {
     font-family: 'Poppins', sans-serif;
     position: relative;
+
+}
+#board-icon {
+    height: 26px;
+    width: 20px;
+    background-image: url("../img/board3.png");
+    background-size: cover;
+    background-position: center center;
+    margin-right: 5px;
+    opacity: 0.5;
+}
+.save {
+    height: 20px;
+    width: 20px;
+    background-image: url("../img/save.png");
+    background-size: cover;
+    background-position: center center;
+    margin-right: 5px;
+    opacity: 0.7;
+}
+#fon-icon {
+    height: 20px;
+    width: 36px;
+    opacity: 0.7;
+    background-size: cover;
+    background-position: center center;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.fon-icon2{
+    height: 30px;
+    width: 54px;
+    opacity: 0.7;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3px;
+}
+#save-icon {
+    font-size: 14px;
+    border-color: transparent;
+    background-color: transparent;
+    border-radius: 3px;
+    min-width: 100px;
+    height: 30px;
+    cursor: pointer;
+    padding: 3px;
+    transition: all 0.3s;
+    margin: 1px;
+    align-items: center;
+    transition: all 0.3s;
+}
+#add-board {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 5px 10px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+#add-board:hover {
+    background-color: rgba(0, 0, 0, 0.46);
+}
+#save-icon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .board {
     color: white;
     height: 100vh;
+    overflow: auto;
+    background-color: darkslategray;
+}
+.board::-webkit-scrollbar {
+    background-color: none;
+    border-radius: 20px;
+    width: 8px;
+    height: 8px;
+
+}
+.board::-webkit-scrollbar-thumb{
+    background-color:rgba(0, 0, 20, 0.8);
+    border-radius: 10px;
+
+    
 }
 .board-header {
     padding: 10px;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    column-gap: 10px;
+    column-gap: 20px;
 }
+
 .board-header input {
     color: white;
-    font-size: 40px;
+    font-size: 20px;
+    width: 200px;
     background-color: transparent;
     border: none;
+    border-radius: 3px;
     text-align: center;
+    padding: 7px;
+    transition: all 0.3s;
 }
+.board-header input:hover {
+   background-color: rgba(255, 255, 255, 0.4);
+   border-radius: 3px;
+   cursor: pointer;
+}
+
 .board-header input:focus {
     color: black;
     background-color: white;
+    outline: none;
+
 }
+
 .board-content {
     display: flex;
 }
+
 .column {
     color: black;
     width: 250px;
-    background-color: gainsboro;
-    margin: 0 10px 10px;
+    background-color: #E8E8E8;
+    margin: 5px 10px ;
     padding: 5px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 3px;
 }
+
 .column-header {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
     padding: 0 5px 0;
 }
+
 .column-header input {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
     background-color: transparent;
     border: none;
+    padding: 5px;
     max-width: 200px;
+    border-radius: 3px;
+    transition: all 0.3s;
+
+}
+.column-header input:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    
 }
 .column-header input:focus {
     background-color: white;
+    outline: none;
 }
+
+
+
 .column-content {
     padding: 5px;
 }
+
 .column-delete {
     display: none;
     cursor: pointer;
+    transition: all 0.3s;
 }
+
 .column:hover .column-delete {
     display: block;
 }
+
+
 .card {
-    background-color: ghostwhite;
-    border-radius: 5px;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 3px;
     margin: 5px 0;
     position: relative;
     padding: 5px;
     box-sizing: border-box;
+    transition: all 0.3s;
 }
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
 .card-delete {
     display: none;
     cursor: pointer;
     position: absolute;
     top: 5px;
     right: 5px;
+    transition: all 0.3s;
 }
+
 .card:hover .card-delete {
     display: block;
 }
+
 .flex-box {
     display: flex;
-    flex-wrap: wrap;
 }
+
 .to-right {
     margin: 0 0 0 auto;
 }
-#close-wallpapers{
+.close-wallpapers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:dimgray;
     cursor: pointer;
-    width: 100%;
-    padding-left: 330px;
+    width: 17px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    flex: none;
+    position: fixed;
+    transition: all 0.3s;
+}
+
+.close-boardList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:dimgray;
+    cursor: pointer;
+    width: 17px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    flex: none;
+    position: absolute;
+    right: 0;
+    transition: all;
+}
+.close-wallpapers:hover, .close-boardList:hover {
+    background-color: rgba(0, 0, 0, 0.46);
+    color:white;
+}
+.p-relative{
+    position: relative;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+.bl-container {
+    margin-right: 17px;
+    flex: 1;
 }
 .ghost {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .d-none{
     display: none;
@@ -128,13 +333,56 @@ body {
 .btn-addCard{
     cursor: pointer;
     padding: 5px;
-    text-align: center;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+.btn-addCard:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+
 }
 .btn{
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(255,255,255,0.25);
     color: white;
-    border-color: white;
-    width: 150px;
-    height: 30px;
+    align-items: center;
+    font-size: 16px;
+    border-color: transparent;
+    border-radius: 3px;
+    min-width: 100px;
+    height: 38px;
     cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+.clmn-add {
+    font-size: 14px;
+    margin-top: 5px;
+    min-width: 150px;
+}
+
+.card-title, .card-description, .card-time{
+    background-color: whitesmoke;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    min-height: 25px;
+    box-sizing: border-box;
+    outline-color: lavender;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.side-menu-item div:last-child {
+    margin-left: auto;
+    display: none;
+}
+.side-menu-item:hover div:last-child{
+    display: block;
+} 
+.align-item-fs {
+    align-items: flex-start;
 }
